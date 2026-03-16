@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<title>Gym The Patriotic</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+--gold:#d4af37;
+--dark:#0c0c0f;
+--dark-light:#15151a;
+--white:#ffffff;
+--text:#dcdcdc;
+--gradient-gold:linear-gradient(135deg,#d4af37,#f5e6a1,#b8902e);
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins,sans-serif;
+}
+
+body{
+background:var(--dark);
+color:var(--white);
+}
+
+a{text-decoration:none;color:inherit;}
+
+img{
+width:100%;
+display:block;
+border-radius:14px;
+}
+
+section{
+padding:90px 60px;
+}
+
+.title{
+text-align:center;
+margin-bottom:50px;
+}
+
+.title h2{
+font-size:38px;
+}
+
+.title span{
+color:var(--gold);
+}
+
+/* HEADER */
+
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+background:rgba(0,0,0,.85);
+backdrop-filter:blur(10px);
+padding:16px 60px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+z-index:999;
+}
+
+.logo{
+font-size:26px;
+font-weight:700;
+color:var(--gold);
+}
+
+nav a{
+margin:0 14px;
+font-weight:500;
+}
+
+.nav-btn{
+background:var(--gradient-gold);
+color:black;
+padding:10px 24px;
+border-radius:30px;
+font-weight:600;
+}
+
+/* HERO */
+
+.hero{
+height:100vh;
+
+background:
+linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.4)),
+url("https://images.unsplash.com/photo-1558611848-73f7eb4001a1");
+
+background-size:cover;
+background-position:center;
+
+display:flex;
+align-items:center;
+padding:0 60px;
+}
+
+.hero-content{
+max-width:650px;
+animation:fadeUp 1.2s ease;
+}
+
+.hero .location{
+font-size:14px;
+color:#bbb;
+margin-bottom:10px;
+}
+
+.hero h1{
+font-size:64px;
+margin-bottom:20px;
+}
+
+.hero span{
+color:var(--gold);
+}
+
+.hero p{
+font-size:18px;
+color:var(--text);
+margin-bottom:30px;
+}
+
+.hero a{
+display:inline-block;
+padding:14px 36px;
+border-radius:40px;
+font-weight:600;
+margin-right:15px;
+transition:.3s;
+}
+
+.btn-primary{
+background:var(--gradient-gold);
+color:black;
+}
+
+.btn-primary:hover{
+transform:translateY(-3px);
+box-shadow:0 10px 30px rgba(212,175,55,0.6);
+}
+
+.btn-outline{
+border:2px solid var(--gold);
+color:var(--gold);
+}
+
+.btn-outline:hover{
+background:var(--gradient-gold);
+color:black;
+}
+
+@keyframes fadeUp{
+0%{opacity:0;transform:translateY(40px);}
+100%{opacity:1;transform:translateY(0);}
+}
+
+/* PRICING */
+
+.pricing{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:30px;
+}
+
+.plan{
+background:var(--dark-light);
+padding:40px;
+border-radius:20px;
+text-align:center;
+border:1px solid rgba(212,175,55,0.2);
+}
+
+.plan.featured{
+border:2px solid var(--gold);
+box-shadow:0 20px 50px rgba(0,0,0,.6);
+}
+
+.price{
+font-size:42px;
+color:var(--gold);
+margin:20px 0;
+}
+
+.plan ul{
+list-style:none;
+margin:20px 0;
+}
+
+.plan li{
+color:var(--text);
+margin:10px 0;
+}
+
+.plan a{
+display:inline-block;
+background:var(--gradient-gold);
+color:black;
+padding:12px 30px;
+border-radius:30px;
+}
+
+.terms{
+font-size:14px;
+color:var(--text);
+}
+
+/* GRID */
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+.box{
+background:var(--dark-light);
+padding:30px;
+border-radius:16px;
+border:1px solid rgba(212,175,55,0.15);
+transition:.3s;
+}
+
+.box:hover{
+transform:translateY(-8px);
+border-color:var(--gold);
+}
+
+.box h3{
+color:var(--gold);
+margin-bottom:10px;
+}
+
+.box p{
+color:var(--text);
+}
+
+/* ABOUT */
+
+.two-col{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+align-items:center;
+}
+
+.two-col p{
+color:var(--text);
+}
+
+/* GALLERY */
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+
+/* TRAINERS */
+
+.trainers-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:40px;
+}
+
+.trainer-card{
+background:var(--dark-light);
+border-radius:22px;
+overflow:hidden;
+text-align:center;
+border:1px solid rgba(212,175,55,0.15);
+transition:.4s;
+}
+
+.trainer-card img{
+height:320px;
+object-fit:cover;
+}
+
+.trainer-card h3{
+color:var(--gold);
+margin:18px 0 5px;
+}
+
+.trainer-card p{
+color:var(--text);
+padding-bottom:20px;
+}
+
+.trainer-card:hover{
+transform:translateY(-10px);
+border-color:var(--gold);
+}
+
+/* FAQ */
+
+.faq-container{
+max-width:900px;
+margin:auto;
+}
+
+.faq-item{
+background:var(--dark-light);
+border-radius:16px;
+margin-bottom:15px;
+overflow:hidden;
+}
+
+.faq-question{
+width:100%;
+background:none;
+border:none;
+color:white;
+padding:20px;
+font-size:18px;
+display:flex;
+justify-content:space-between;
+cursor:pointer;
+}
+
+.faq-question span{
+color:var(--gold);
+font-size:26px;
+}
+
+.faq-answer{
+max-height:0;
+overflow:hidden;
+transition:.4s;
+}
+
+.faq-answer p{
+padding:0 20px 20px;
+color:var(--text);
+}
+
+.faq-item.active .faq-answer{
+max-height:200px;
+}
+
+.faq-item.active .faq-question span{
+transform:rotate(45deg);
+}
+
+/* CONTACT */
+
+.contact{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+}
+
+input,textarea{
+width:100%;
+padding:14px;
+margin-bottom:15px;
+background:var(--dark-light);
+border:1px solid rgba(212,175,55,0.2);
+color:white;
+border-radius:10px;
+}
+
+button{
+width:100%;
+padding:14px;
+border:none;
+background:var(--gradient-gold);
+color:black;
+border-radius:30px;
+font-weight:600;
+}
+
+/* FOOTER */
+
+/* FOOTER */
+
+.lux-footer{
+  background:#0a0a0f;
+  padding:80px 30px 30px;
+  border-top:1px solid rgba(212,175,55,0.2);
+}
+
+.footer-container{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:50px;
+  max-width:1200px;
+  margin:auto;
+}
+
+.footer-box h3{
+  color:var(--gold);
+  margin-bottom:15px;
+}
+
+.social-icons{
+  display:flex;
+  gap:15px;
+  margin-top:15px;
+}
+
+.social-icons a{
+  width:42px;
+  height:42px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
+  background:var(--dark-light);
+  color:var(--gold);
+  border:1px solid rgba(212,175,55,0.3);
+  transition:0.4s;
+}
+
+.social-icons a:hover{
+  background:var(--gold);
+  color:#000;
+  box-shadow:0 0 20px rgba(212,175,55,0.7);
+}
+
+.footer-bottom{
+  text-align:center;
+  margin-top:50px;
+  padding-top:20px;
+  border-top:1px solid rgba(212,175,55,0.2);
+  color:#888;
+  font-size:14px;
+}
+
+/* MOBILE */
+
+.menu-toggle{
+display:none;
+font-size:28px;
+cursor:pointer;
+}
+
+@media(max-width:900px){
+.trainers-grid{grid-template-columns:1fr;}
+}
+
+@media(max-width:768px){
+
+header,section,.hero{padding:25px;}
+
+.hero h1{font-size:40px;}
+
+.two-col,
+.contact{grid-template-columns:1fr;}
+
+.menu-toggle{display:block;}
+
+nav{
+position:absolute;
+top:70px;
+left:0;
+width:100%;
+background:#000;
+flex-direction:column;
+text-align:center;
+display:none;
+}
+
+nav.active{display:flex;}
+
+nav a{
+padding:15px 0;
+border-bottom:1px solid #222;
+}
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">Gym The Patriotic</div>
+
+<div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+<nav id="navMenu">
+<a href="#home">Home</a>
+<a href="#pricing">Membership</a>
+<a href="#amenities">Amenities</a>
+<a href="#trainers">Trainers</a>
+<a href="#contact">Contact</a>
+
+
+</header>
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+<div class="hero-content">
+
+<p class="location">📍 Seminole, Texas</p>
+
+<h1>
+Build Your <span>Strength</span><br>
+Transform Your <span>Life</span>
+</h1>
+
+<p>
+Join a community dedicated to fitness, strength, and transformation.
+Train with modern equipment and expert trainers.
+</p>
+
+<a class="btn-primary" href="#pricing">Join Now</a>
+<a class="btn-outline" href="#amenities">Explore Gym</a>
+
+</div>
+
+</section>
+
+<!-- PRICING -->
+
+<section id="pricing">
+
+<div class="title">
+<h2>Membership <span>Pricing</span></h2>
+</div>
+
+<div class="pricing">
+
+<div class="plan">
+<h3>Month-to-Month</h3>
+<div class="price">$39</div>
+<ul>
+<li>Full Gym Access</li>
+<li>No Contract</li>
+</ul>
+<a href="#">Join Now</a>
+</div>
+
+<div class="plan featured">
+<h3>Annual Plan</h3>
+<div class="price">$29</div>
+<ul>
+<li>Best Value</li>
+<li>All Amenities</li>
+</ul>
+<a href="#">Join Now</a>
+</div>
+
+<div class="plan">
+<h3>Student / Family</h3>
+<div class="price">$25</div>
+<ul>
+<li>Discounted Rates</li>
+<li>Flexible Access</li>
+</ul>
+<a href="#">Join Now</a>
+</div>
+
+</div>
+</section>
+
+<!-- AMENITIES -->
+
+<section id="amenities">
+
+<div class="title">
+<h2>Our <span>Amenities</span></h2>
+</div>
+
+<div class="grid">
+
+<div class="box">
+<h3>Cardio Equipment</h3>
+<p>Modern treadmills and bikes.</p>
+</div>
+
+<div class="box">
+<h3>Weight Room</h3>
+<p>Free weights and machines.</p>
+</div>
+
+<div class="box">
+<h3>Group Classes</h3>
+<p>HIIT and strength sessions.</p>
+</div>
+
+<div class="box">
+<h3>Sauna</h3>
+<p>Relax after workouts.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- TRAINERS -->
+
+<section id="trainers">
+
+<div class="title">
+<h2>Trainer <span>Experts</span></h2>
+</div>
+
+<div class="trainers-grid">
+
+<div class="trainer-card">
+<img src="https://images.unsplash.com/photo-1605296867304-46d5465a13f1">
+<h3>John Smith</h3>
+<p>Strength Coach</p>
+</div>
+
+<div class="trainer-card">
+<img src="https://images.unsplash.com/photo-1594381898411-846e7d193883">
+<h3>Emily Brown</h3>
+<p>Fitness Trainer</p>
+</div>
+
+<div class="trainer-card">
+<img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf">
+<h3>Mike Johnson</h3>
+<p>Personal Trainer</p>
+</div>
+
+</div>
+
+</section>
+
+<footer class="lux-footer" id="contact">
+  <div class="footer-container">
+
+    <div class="footer-box">
+      <h3>Gym The Patriotic</h3>
+      <p>
+        Dedicated to excellence in education, leadership, and holistic development.
+      </p>
+    </div>
+
+    <div class="footer-box">
+      <h3>Contact</h3>
+      <ul>
+        <li><i class="fas fa-map-marker-alt"></i> Andheri East, Mumbai</li>
+        <li><i class="fas fa-phone"></i> +91 98765 43210</li>
+        <li><i class="fas fa-envelope"></i> info@GymThePatriotic.com</li>
+      </ul>
+    </div>
+
+    <div class="footer-box">
+      <h3>Follow Us</h3>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+
+  </div>
+  <!-- ================= LOCATION MAP ================= -->
+<section id="location" class="map-section">
+  <h2>Visit Our Campus</h2>
+
+  <div class="map-container">
+    <iframe 
+      src="https://www.google.com/maps?q=Jogeshwari%20Mumbai&output=embed"
+      loading="lazy"
+      allowfullscreen>
+    </iframe>
+  </div>
+</section>
+
+
+  <div class="footer-bottom">
+    © 2026 Gym The Patriotic | Designed with Omkar DEV 
+  </div>
+</footer>
+
+<script>
+
+function toggleMenu(){
+document.getElementById("navMenu").classList.toggle("active");
+}
+
+const faqItems=document.querySelectorAll(".faq-item");
+
+faqItems.forEach(item=>{
+const question=item.querySelector(".faq-question");
+
+if(question){
+question.addEventListener("click",()=>{
+
+faqItems.forEach(other=>{
+if(other!==item){
+other.classList.remove("active");
+}
+});
+
+item.classList.toggle("active");
+
+});
+}
+
+});
+
+</script>
+
+</body>
+</html>
